@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<title>Differences in Communication of Uncertainty in a Conclusion of a Scientific Assessment</title>
+
+<script src="setac_uc_poster_files/header-attrs-2.13/header-attrs.js"></script>
+
+
+
+
+
+
+<!--
+Font-awesome icons ie github or twitter
+-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/brands.css" integrity="sha384-n9+6/aSqa9lBidZMRCQHTHKJscPq6NW4pCQBiMmHdUCvPN8ZOg2zJJTkC7WIezWv" crossorigin="anonymous">
+
+<!--
+Google fonts api stuff
+-->
+<link href='https://fonts.googleapis.com/css?family=Special Elite' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Rasa' rel='stylesheet'>
+
+<!--
+Here are the required style attributes for css to make this poster work :)
+-->
+<style>
+@page {
+size: 46in 32in;
+margin: 0;
+padding: 0;
+background-color: #ffffff;
+}
+body {
+margin: 0px;
+padding: 0px;
+width: 46in;
+height: 32in;
+text-align: justify;
+font-size: 36px;
+background-color: #FFFFFF;
+color: #000000;
+}
+/* RMarkdown Class Styles */
+/* center align leaflet map,
+from https://stackoverflow.com/questions/52112119/center-leaflet-in-a-rmarkdown-document */
+.html-widget {
+margin: auto;
+position: sticky;
+margin-top: 2cm;
+margin-bottom: 2cm;
+}
+.leaflet.html-widget.html-widget-static-bound.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+position: sticky;
+width: 100%;
+}
+pre.sourceCode.r, pre.sourceCode.python {
+background-color: #ffffff20;
+border: solid #008080 1mm;
+border-radius: 0.5em;
+padding: 4mm;
+margin: auto;
+margin-top: 1em;
+margin-bottom: 1em;
+/* align-items: center; */
+}
+div.sourceCode {
+background-color: transparent;
+width: 85%;
+margin-left: auto;
+margin-right: auto;
+}
+code.sourceCode.r, code.sourceCode.python {
+background-color: transparent;
+font-size: 20pt;
+border-radius: 2mm;
+}
+code {
+font-size: 25pt;
+font-family: monospace;
+background-color: #00808024;
+color: #008080;
+padding: 1.2mm;
+line-height: 1;
+border-radius: 2mm;
+}
+caption {
+margin-bottom: 10px;
+font-size: 20pt;
+font-style: italic;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #0b454520;
+}
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td{
+  border-spacing: 0;
+  font-size: 40%;
+  border-style: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 1em;
+  padding-left: 1em;
+  line-height: 1em;
+}
+table {
+  margin: auto;
+}
+th {
+  padding-left: 5mm;
+  padding-right: 5mm;
+}
+.caption {
+font-size: 20pt;
+font-style: italic;
+padding-top: 0;
+}
+.references {
+font-size: 30px;
+line-height: 90%;
+}
+/* Create three unequal columns that floats next to each other */
+.column {
+float: left;
+padding: 0px;
+}
+.outer {
+width: 46in;
+height: 32in;
+-webkit-column-count: 2; /* Chrome, Safari, Opera */
+-moz-column-count: 2; /* Firefox */
+column-count: 2;
+-webkit-column-fill: auto;
+-moz-column-fill: auto;
+column-fill: auto;
+-webkit-column-rule-width: 0.3;
+-moz-column-rule-width: 0.3;
+column-rule-width: 0.3;
+-webkit-column-rule-style: solid;
+-moz-column-rule-style: solid;
+column-rule-style: solid;
+-webkit-column-rule-color: black;
+-moz-column-rule-color: black;
+column-rule-color: black;
+-webkit-column-gap: calc(0.3 * 100%);
+background-color: #ffffff;
+font-family: Rasa;
+color: #000000;
+}
+span.citation {
+  color: #008080;
+  font-weight: bold;
+}
+a {
+text-decoration: none;
+color: #008080;
+}
+#title {
+font-size: 100pt;
+text-align: left;
+margin: 0;
+line-height: 90%;
+border-bottom: 0;
+}
+#author {
+color: #0b4545;
+margin: 0;
+text-align: left;
+line-height: 65%;
+font-size: 1.17em;
+}
+#affiliation {
+padding-top: 1em;
+color: #cc0000;
+font-style: italic;
+font-size: 30px;
+margin: 0;
+}
+sup {
+color: #cc0000;
+}
+.affiliation sup {
+font-size: 20px;
+}
+.author sup {
+font-size: 30px;
+}
+.author_extra {
+color: #008080;
+margin: 0;
+line-height: 85%;
+font-size: 35px;
+}
+.outer h1 {
+text-align: center;
+margin-top: 0.5in;
+margin-bottom: 0.5in;
+}
+.outer h2 {
+text-align: center;
+}
+.outer p {
+color: #000000;
+}
+.outer ol {
+text-align: left;
+}
+.main {
+width: calc(46in * 0.3);
+height: 32in;
+position: absolute;
+margin-left: calc(46in * ((1 - 0.3) / 2));
+background-color: #0b4545;
+color: #FFFFFF90;
+font-family: Special Elite;
+background-image: linear-gradient(#0b4545 50%, #008080);
+}
+.main strong {
+color: #FFFFFF;
+}
+img.main-img-left {
+width: 20%;
+left: 0.5in;
+bottom: 0.2in;
+position: absolute;
+}
+img.main-img-right {
+width: 18%;
+right: 0.5in;
+bottom: 0.2in;
+position: absolute;
+}
+.main p {
+padding-top: 20%;
+font-size: 64pt;
+text-align: left;
+}
+.fab {
+color: #cc0000;
+font-size: 25px;
+}
+.twitter, i {
+color: #cc0000;
+font-size: 35px;
+text-decoration: none;
+}
+a.email {
+text-decoration: none;
+color: #cc0000;
+font-size: 35px;
+}
+.envelope {
+color: #cc0000;
+font-size: 5px;
+text-decoration: none;
+}
+.globe {
+color: #cc0000;
+font-size: 5px;
+text-decoration: none;
+}
+.github > .fab {
+color: #cc0000;
+font-size: 40px;
+text-decoration: none;
+}
+.globetext {
+color: #cc0000;
+font-size: 35px;
+text-decoration: none;
+}
+.poster_wrap {
+width: 46in;
+height: 32in;
+padding: 0cm;
+background-color: #ffffff;
+}
+span > #tab:mytable {
+  font-weight: bold;
+}
+.section {
+  padding-left: 10mm;
+  padding-right: 10mm;
+}
+.main p {
+  padding-left: 30mm;
+  padding-right: 30mm;
+}
+.main_pic {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.orcid img {
+  width: 3%;
+}
+</style>
+</head>
+<body>
+
+
+<div class="poster_wrap">
+<div class="column outer">
+<br>
+<div class="title section">
+<h1 id="title">Differences in Communication of Uncertainty in a Conclusion of a Scientific Assessment</h1>
+<br>
+<h3 id="author" class="author">
+
+<strong>Ullrika Sahlin</strong><sup> 1, <a class="orcid" href="https://orcid.org/0000-0002-2932-6253"><img src="https://raw.githubusercontent.com/brentthorne/posterdown/master/images/orcid.jpg"></a></sup><br>
+<a class="twitter" href="https://mobile.twitter.com/ullrikasahlin"><i class="fab fa-twitter"></i>&nbsp;@ullrikasahlin</a> <br>
+
+<a class='envelope'><i class="fas fa-envelope"></i></a> <a href="mailto:ullrika.sahlin@cec.lu.se" class="email">ullrika.sahlin@cec.lu.se</a> <br>
+ Andy Hart<sup> 2</sup><br>
+
+</h3>
+
+<h5 id="author_extra" class="author_extra">
+ </h5>
+
+<p id="affiliation" class="affiliation">
+<sup>1</sup> Centre for Environmental and Climate Science, Lund University; Sweden<br> <sup>2</sup> A &amp; A Hart Ltd; UK
+</p>
+
+</div>
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>The answer to an assessment question will always be uncertain to some degree. Communicating this uncertainty matters to decision makers.
+Uncertainty can be challenging to understand and fully embrace as part of a scientific process by experts, as well as by decision makers using scientific assessment as support.</p>
+<p>There are different practices for communicating uncertainty <span class="citation">[<a href="#ref-vanderblesCommunicatingUncertaintyFacts2019" role="doc-biblioref">1</a>]</span>.
+Qualitative expressions of uncertainty are ambiguous and mean different things to different people, e.g. <span class="citation">[<a href="#ref-efsaGuidanceCommunicationUncertainty2019" role="doc-biblioref">2</a>]</span>.
+A personal probability is a quantitative expression of uncertainty with a precisely defined meaning <span class="citation">[<a href="#ref-Ramsey_1926" role="doc-biblioref">3</a>]</span>.
+Reasoning with uncertainty is challenging, and making decisions with multiple forms of uncertainty increases the complexity of an already difficult task <span class="citation">[<a href="#ref-padillaUncertainUncertaintyHow2021" role="doc-biblioref">4</a>]</span>.</p>
+</div>
+<div id="aim-and-conclusion" class="section level1">
+<h1>Aim and conclusion</h1>
+<p>Are there major differences in how three organisations conducting scientific assessments are characterising and communicating uncertainty in their conclusions? <strong>Yes</strong>, they differ</p>
+<ul>
+<li><p>in their view of when it is possible to quantify uncertainty,</p></li>
+<li><p>in their use of mixtures of qualitative and quantitative expressions of uncertainty, and</p></li>
+<li><p>to what extent they use one or several summaries of uncertainty in a conclusion.</p></li>
+</ul>
+</div>
+<div id="recommendations" class="section level1">
+<h1>Recommendations</h1>
+<ul>
+<li><p>Develop strategies to communicate uncertainty in conclusions based on conceptual clarity and evidence from communication research.</p></li>
+<li><p>Acknowledge the subjective nature of uncertainty, someone is uncertain and the best we can do is to characterise it as honestly as possible.</p></li>
+<li><p>Adopt scientific approaches to use expert judgements to consider all sources of uncertainty, i.e. not only those that are addressed by the assessment model or a statistical analysis. Document which sources of uncertainty have been (or not been) considered.</p></li>
+<li><p>Engage decision makers in the development of strategies to communicate uncertainty in conclusions. Find ways of expressing uncertainty are understandable and useful to them, however without compromising the need to communicate scientific uncertainty in conclusions.</p></li>
+<li><p>Try to express uncertainty in a conclusion quantitatively using probability. This should always be possible, provided the conclusion is well defined.</p></li>
+<li><p>Clarify the link between specific expressions for uncertainty in a conclusion and the scientific assessment <span class="citation">[<a href="#ref-SAPEA_2019" role="doc-biblioref">5</a>]</span>. Documenting the methods, evidence and reasoning for the assessment is essential for transparency and credibility of the conclusion.</p></li>
+</ul>
+</div>
+<div id="results" class="section level1">
+<h1>Results</h1>
+<div id="the-intergovernmental-panel-of-climate-change" class="section level2">
+<h2>The Intergovernmental Panel of Climate Change</h2>
+<p>The strength of the knowledge basis is expressed qualitatively (as *“<strong>confidence</strong>). <strong>Certainty</strong> in a conclusion is expressed quantitatively (as <strong>likelihood</strong> or <strong>probability</strong>), but only when the knowledge basis is strong enough. Verbal expressions are used to support communication of quantitative probabilities. <span class="citation">[<a href="#ref-mastrandreaIPCCAR5Guidance2011" role="doc-biblioref">6</a>]</span></p>
+<p><img src="figs/ipcctables.jpg" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="the-cochrane-collaboration" class="section level2">
+<h2>The Cochrane Collaboration</h2>
+<p>Lines of evidence are individually evaluated by critical appraisal, over which the strength of knowledge basis is summed into a qualitative <strong>certainty of the evidence</strong>. If quantitative evidence synthesis is performed, uncertainty in an effect estimate is expressed quantitatively by an uncertainty interval (frequentist <strong>confidence interval</strong> or Bayesian <strong>probability interval</strong>). Conclusion is presented in a summary of findings table <span class="citation">[<a href="#ref-langendamAssessingPresentingSummaries2013" role="doc-biblioref">7</a>]</span>.</p>
+<p><img src="figs/summary_of_finding.jpg" width="60%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="the-european-food-safety-authority" class="section level2">
+<h2>The European Food Safety Authority</h2>
+<p>Uncertainty in a conclusion is expressed quantitatively (as <strong>probability</strong>) taking into account multiple sources of evidence and sources to uncertainty <span class="citation">[<a href="#ref-benfordPrinciplesMethodsEFSA2018" role="doc-biblioref">8</a>]</span>. Verbal expressions are used to support communication of quantitative probabilities <span class="citation">[<a href="#ref-efsaGuidanceCommunicationUncertainty2019" role="doc-biblioref">2</a>]</span>. Probabilities may be communicated as <strong>% certainty</strong> for the more probable conclusion.</p>
+<p><img src="figs/Approximate-probability-scale-recommended-for-harmonised-use-in-EFSA-to-express_W640.jpg" width="60%" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="references" class="section level1 unnumbered">
+<h1>References</h1>
+<div id="refs" class="references csl-bib-body">
+<div id="ref-vanderblesCommunicatingUncertaintyFacts2019" class="csl-entry">
+1. van der Bles AM, van der Linden S, Freeman ALJ, Mitchell J, Galvao AB, Zaval L, et al. <a href="https://doi.org/gf2g9j">Communicating uncertainty about facts, numbers and science</a>. Royal Society Open Science. 2019;6:181870.
+</div>
+<div id="ref-efsaGuidanceCommunicationUncertainty2019" class="csl-entry">
+2. EFSA. Guidance on communication of uncertainty in scientific assessments. EFSA Journal. 2019;17:e05520.
+</div>
+<div id="ref-Ramsey_1926" class="csl-entry">
+3. Ramsey F. <a href="https://doi.org/10.1007/978-3-319-20451-2_3">Truth and probability</a>. 2016. p. 21–45.
+</div>
+<div id="ref-padillaUncertainUncertaintyHow2021" class="csl-entry">
+4. Padilla LMK, Powell M, Kay M, Hullman J. <a href="https://doi.org/10.3389/fpsyg.2020.579267">Uncertain <span>About Uncertainty</span>: <span>How Qualitative Expressions</span> of <span>Forecaster Confidence Impact Decision-Making With Uncertainty Visualizations</span></a>. Frontiers in Psychology. 2021;11:3747.
+</div>
+<div id="ref-SAPEA_2019" class="csl-entry">
+5. SAPEA. Making sense of science for policy under conditions of complexity and uncertainty. 2019. <a href="https://doi.org/10.26356/MASOS">https://doi.org/10.26356/MASOS</a>.
+</div>
+<div id="ref-mastrandreaIPCCAR5Guidance2011" class="csl-entry">
+6. Mastrandrea MD, Mach KJ, Plattner G-K, Edenhofer O, Stocker TF, Field CB, et al. <a href="https://doi.org/10.1007/s10584-011-0178-6">The <span>IPCC AR5</span> guidance note on consistent treatment of uncertainties: A common approach across the working groups</a>. Climatic Change. 2011;108:675–91.
+</div>
+<div id="ref-langendamAssessingPresentingSummaries2013" class="csl-entry">
+7. Langendam MW, Akl EA, Dahm P, Glasziou P, Guyatt G, Schünemann HJ. <a href="https://doi.org/10.1186/2046-4053-2-81">Assessing and presenting summaries of evidence in <span>Cochrane Reviews</span></a>. Systematic Reviews. 2013;2:81.
+</div>
+<div id="ref-benfordPrinciplesMethodsEFSA2018" class="csl-entry">
+8. Benford D, Halldorsson T, Jeger MJ, Knutsen HK, More S, Naegeli H, et al. <a href="https://doi.org/10.2903/j.efsa.2018.5122">The principles and methods behind <span>EFSA</span>’s guidance on uncertainty analysis in scientific assessment</a>. EFSA Journal. 2018;16:e05122.
+</div>
+</div>
+</div>
+
+</div>
+<div class="main">
+<p>Simple, Confusing or Sensible?<br><br> <img src="figs/setac_unc.jpg" class="main_pic" /><br><br> Express uncertainty in a conclusion carefully:<br><br> aim for honesty<br><br> avoid complexity<br><br> ensure interpretability<br><br> show justification</p>
+<img src="figs/risk-hunter-og.png" class="main-img-left" />
+<img src="figs/LundUniversity_C2line_CMYK.jpg" class="main-img-right" />
+</div>
+</div>
+
+
+
+</body>
+</html>
